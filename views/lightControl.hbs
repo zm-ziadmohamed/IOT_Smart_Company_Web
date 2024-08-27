@@ -1,0 +1,40 @@
+{{> navigation}}
+<div class="main-content">
+     <div class="container mt-5">
+        <h1 class="mb-4">Control light</h1>
+
+        {{#if errors}}
+            <div class="alert alert-danger">
+                <ul class="mb-0">
+                    {{#each errors}}
+                        <li>{{msg}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+
+        <form action="/light-control" method="post">
+            <div class="mb-3">
+                <label for="color" class="form-label">Color:</label>
+                <select name="color" id="color" class="form-select">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="white">White</option>
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                <label for="mode" class="form-label">Mode:</label>
+                <select name="mode" id="mode" class="form-select">
+                    <option value="High">High</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Off">Off</option>
+                    <option value="Auto">Auto</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+{{> navigation}}
+
+<div class="main-content">
+    <div class="container mt-5">
+        <h2>Employee Attendance</h2>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Secret</th>
+                    <th scope="col">Date & Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each attendanceRecords}}
+                <tr>
+                    <th scope="row">{{@index}}</th>
+                    <td>{{this.employeeData.name}}</td>
+                    <td>{{this.employeeData.phone}}</td>
+                    <td>{{this.secret}}</td>
+                    <td>{{this.date}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

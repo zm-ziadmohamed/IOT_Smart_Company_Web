@@ -1,0 +1,47 @@
+body {
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+.form-control {
+    border-radius: 0.5rem;
+}
+.btn-primary {
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+.form-check-label {
+    margin-left: 0.25rem;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+}
