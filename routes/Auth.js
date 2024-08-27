@@ -2,7 +2,7 @@ const userModel = require("../models/user");
 const express = require('express');
 const router = express.Router();
 const { check, validationResult } = require('express-validator');
-const { hashCompare, JWTCreate , isNotLoggedIn , isLoggedIn } = require('../security')
+const { hashCompare, JWTCreate , isNotLoggedIn , isLoggedIn, hashPassword } = require('../security')
 
 // Middleware for error handling
 function handleErrors(req, res, errors, redirectUrl) {
@@ -71,5 +71,10 @@ router.get('/logout', isLoggedIn ,(req, res, next) => {
     // Redirect to the login page or home page
     res.redirect('/login');
 });
+
+//(userModel({username : "zengo" , password : hashPassword(123456) })).save().then(res => console.log(res)).catch(err=> console.log("error occurred"))
+/*
+
+*/
 
 module.exports = router;

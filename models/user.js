@@ -12,6 +12,5 @@ const userModel = mongoose.model('user', mongoose.Schema({
 }))
 
 
-
 //userModel.deleteMany().then(res => console.log(res))
 module.exports = userModel
