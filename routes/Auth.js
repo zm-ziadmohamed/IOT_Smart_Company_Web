@@ -74,7 +74,7 @@ router.get('/logout', isLoggedIn ,(req, res, next) => {
 
 /*
 const hashedPassword = hashPassword("123456"); // Ensure hashPassword is a function that returns a hashed password
-const user = new UserModel({ username: "zengo", password: hashedPassword });
+const user = new userModel({ username: "zengo", password: hashedPassword });
 
 user.save()
   .then(res => console.log(res))
