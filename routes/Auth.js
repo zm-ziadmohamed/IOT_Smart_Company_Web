@@ -72,8 +72,13 @@ router.get('/logout', isLoggedIn ,(req, res, next) => {
     res.redirect('/login');
 });
 
-//(userModel({username : "zengo" , password : hashPassword(123456) })).save().then(res => console.log(res)).catch(err=> console.log("error occurred"))
 /*
+const hashedPassword = hashPassword("123456"); // Ensure hashPassword is a function that returns a hashed password
+const user = new UserModel({ username: "zengo", password: hashedPassword });
+
+user.save()
+  .then(res => console.log(res))
+  .catch(err => console.log("Error occurred:", err)); // Including error details in the console
 
 */
 
