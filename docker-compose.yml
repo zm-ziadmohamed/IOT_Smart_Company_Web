@@ -13,7 +13,7 @@ services:
     environment:
       NODE_ENV: development
       MONGO_URI: mongodb://mongo:27017/expressdb
-    command: sh -c "npm install && nodemon"
+    command: sh -c "npm install && npm start"
     depends_on:
       - mongo
 
