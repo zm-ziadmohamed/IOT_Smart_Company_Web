@@ -12,7 +12,7 @@ services:
       - "3000:3000"
     environment:
       NODE_ENV: development
-      MONGO_URI: ${DB_USERNAME}   # Reference the MONGO_URI from the .env file
+      MONGO_URI: "mongodb://185.192.97.183/iot_final"   # Reference the MONGO_URI from the .env file
     command: sh -c "npm install && npm start"
     depends_on:
       - mongo
