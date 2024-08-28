@@ -12,7 +12,7 @@ services:
       - "3000:3000"
     environment:
       NODE_ENV: development
-      MONGO_URI: mongodb://mongo:27017/expressdb
+      MONGO_URI: ${MONGO_URI}   # Reference the MONGO_URI from the .env file
     command: sh -c "npm install && npm start"
     depends_on:
       - mongo
