@@ -14,7 +14,7 @@ function handleErrors(req, res, errors, redirectUrl) {
 function setAuthCookie(res, token) {
     res.cookie('token', token, {
         httpOnly: true, // Prevents client-side JavaScript from accessing the cookie
-        secure: true,
+        secure: false,
         maxAge: 24 * 60 * 60 * 1000, // 1 day in milliseconds
         sameSite: 'strict', // Helps prevent CSRF attacks
     });
