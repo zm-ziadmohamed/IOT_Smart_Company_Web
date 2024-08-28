@@ -12,7 +12,7 @@ router.get('/light-control', isLoggedIn, (req, res) => {
 
 // Route to handle form submission
 router.post('/light-control', isLoggedIn, [
-    check('color').isIn(['red', 'green', 'white']).withMessage('Invalid color'),
+    check('color').isIn(['red', 'green', 'white', 'yellow']).withMessage('Invalid color'),
     check('mode').isIn(['High', 'Low', 'Medium', 'Off', 'Auto']).withMessage('Invalid mode')
 ], (req, res) => {
     const errors = validationResult(req).array();
